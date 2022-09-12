@@ -59,6 +59,27 @@ header{
 .cell{
     background-color: var(--light);
 }
+.cell:hover{
+    background-color:#f1f1f1;
+}
+/* Scoreboard */
+.scoreboard-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+.scoreboard i{
+    font-size: 1.5rem;
+}
+.scoreboard{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.scoreboard i.fa-xmark{
+    font-size: 1.6rem;
+}
 /* JS auxiliar classes */
 i.hide{ display: none;}
 

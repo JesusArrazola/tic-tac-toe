@@ -1,3 +1,6 @@
+//Aux objects
+const $ = selector => document.querySelector(selector);
+const $_ = selector => document.querySelectorAll(selector);
 const gameBoard = (()=>{
 
     let status = [[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']]; //' '(Unfilled), 'X','O'
@@ -5,20 +8,27 @@ const gameBoard = (()=>{
     const isAvailable = (x,y) => status[x][y] === ' ';
     const clear = () => status = [[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']];
     const set = (marker,x,y) => {
-        status[x][y] = marker;
+        if(isAvailable(x,y)){
+            status[x][y] = marker;
+            return true;
+        } 
+        return false;
     }
+    const get = (x,y) => status[x][y];
     
-    return {clear,set,isAvailable};
+    return {clear,get,set};
 })();
 
-const player = (name,marker)=>{
-    
-    let score = 0;
-    
-    const getName = () => name;
-    const getMarker = () => marker;
-
-
-    return {getName,getMarker};
-}
-
+//Objeto renderer
+const renderer = (()=>{
+    let show = (x,y,marker)=>{
+        let query = `.cell#${x}-${y}.${marker}`; //.cell#1-1.xmark || .cell#1-1.circle || .cell#1-1.ws
+        $(query).classList.add('show');
+    }
+    let clearCell = (x,y) => {
+        let query = `.cell#${x}-${y} *`;
+    }
+    return {show};
+})();
+//Objeto gameflow
+//Objeto computer

@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
     <!-- Fontawesome icons -->
-    <script src="https://kit.fontawesome.com/6a2e87b34a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <!-- Source code -->
     <script defer src="js/app.js"></script>
 </head>
@@ -30,17 +30,25 @@
         </header>
         <section class="gameboard-cont">
             <div class="gameboard">
-                <div class="cell"></div>
-                <div class="cell"></div>
-                <div class="cell"></div>
-                <div class="cell"></div>
-                <div class="cell"></div>
-                <div class="cell"></div>
-                <div class="cell"></div>
-                <div class="cell"></div>
-                <div class="cell"></div>
+                <div class="cell" id="0-0"><i class="fas fa-xmark"></i></div>
+                <div class="cell" id="0-1"></div>
+                <div class="cell" id="0-2"></div>
+                <div class="cell" id="1-0"></div>
+                <div class="cell" id="1-1"></div>
+                <div class="cell" id="1-2"></div>
+                <div class="cell" id="2-0"></div>
+                <div class="cell" id="2-1"></div>
+                <div class="cell" id="2-2"></div>
             </div>
-            <p class="scoreboard">O Player1: 1  X Player2: 0</p>
+            <div class="scoreboard-container">
+                <p class="scoreboard"><i class="far fa-circle"></i> Player 1</p>
+                <p class="scoreboard">
+                    <span id="player1sc">0</span>
+                    -
+                    <span id="player2sc">0</span>
+                </p>
+                <p class="scoreboard"><i class="fas fa-xmark"></i> Player 2</p>
+            </div>
         </section>
         <footer>
             <p class="copyright margin-updown-10">Made with <i class="fas fa-heart"></i> by <a href="https://github.com/jesusarrazola">Jesús Arrazola</a></p>
