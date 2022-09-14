@@ -27,6 +27,7 @@ const renderer = (()=>{
     }
     let clearCell = (x,y) => {
         let query = `.cell#${x}-${y} *`;
+        
     }
     return {show};
 })();

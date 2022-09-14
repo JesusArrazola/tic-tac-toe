@@ -58,9 +58,18 @@ header{
 }
 .cell{
     background-color: var(--light);
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 .cell:hover{
     background-color:#f1f1f1;
+}
+.cell i.fa-xmark {
+    font-size: 4.5rem;
+}
+.cell i.fa-circle{
+    font-size: 4rem;
 }
 /* Scoreboard */
 .scoreboard-container{
@@ -81,7 +90,7 @@ header{
     font-size: 1.6rem;
 }
 /* JS auxiliar classes */
-i.hide{ display: none;}
+.cell i.hide, .mode-container i.hide{ display: none;}
 
 /* Responsive */
 @media (max-width:880px) {
